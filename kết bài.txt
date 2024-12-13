@@ -1,0 +1,42 @@
+// Step 1: Answer for first question (Noel năm nay ăn 🌽 nướng...)
+document.getElementById('answerYes').addEventListener('click', function() {
+    document.getElementById('nextQuestion').style.display = 'block';
+    document.getElementById('question').style.display = 'none';
+    document.getElementById('answerYes').style.display = 'none';
+    document.getElementById('answerNo').style.display = 'none';
+});
+
+document.getElementById('answerNo').addEventListener('click', function() {
+    document.getElementById('answerNo').style.transform = 'translateX(100%)'; // Move "Không" out of the view
+    document.getElementById('answerNo').disabled = true; // Disable "Không" button
+});
+
+// Step 2: Answer for second question (Nổ cái địa điểm bạn êii...)
+document.getElementById('answerPlace1').addEventListener('click', function() {
+    document.getElementById('answerPlace1').style.transform = 'translateX(100%)'; // Move "Nhà Anh Tiên Đẹp rai...😎" out of the view
+    document.getElementById('answerPlace1').disabled = true; // Disable the button
+});
+
+document.getElementById('answerPlace2').addEventListener('click', function() {
+    document.getElementById('finalQuestion').style.display = 'block';
+    document.getElementById('nextQuestion').style.display = 'none';
+});
+
+// Step 3: Answer for final question (Nổ anh nghe cái thời gian nào...?)
+document.getElementById('answerTime1').addEventListener('click', function() {
+    launchFireworks();
+});
+
+document.getElementById('answerTime2').addEventListener('click', function() {
+    launchFireworks();
+});
+
+document.getElementById('answerTime3').addEventListener('click', function() {
+    launchFireworks();
+});
+
+// Function to trigger fireworks
+function launchFireworks() {
+    alert('Chúc mừng bạn đã hoàn thành câu hỏi! 🎆🎇');
+    // Here you can replace the alert with a fireworks animation or image
+}
